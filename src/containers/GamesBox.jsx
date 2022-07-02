@@ -1,9 +1,13 @@
 import React, {useEffect, useState} from "react";
+import Header from "../components/Header";
+import FilterCategory from "../components/FilterCategory";
+import CategoryResults from "../components/CategoryResults";
 
 const GameBox = () => {
     const [games, setGames] = useState([]);
-    const [url, setUrl] = useState("")
+    const [url, setUrl] = useState("");
     const [filter, setFilter] = useState("");    
+    const [categories, setCategories] = useState([]);
 
     async function getGames() {
         const url = (`https://www.freetogame.com/api/games`);
@@ -15,9 +19,16 @@ const GameBox = () => {
 
     useEffect(() => {
         getGames();
-    }, [])
+    }, []);
 
-    return <h1>Games Box</h1> ;
+    return (
+        <div>
+            <h1>Games Box</h1>
+            <Header/>
+            <FilterCategory/>
+            <CategoryResults games={games}/>
+        </div>
+    );
 };
 
 export default GameBox;
