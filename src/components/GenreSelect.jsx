@@ -1,6 +1,6 @@
 import React from "react";
 
-const GenreSelect = ({genres, onSelectGenre}) => {
+const GenreSelect = ({genres}) => {
     const options = genres.map((genre, index) => {
         return <option value={genre} key={index}>{genre}</option>
     });

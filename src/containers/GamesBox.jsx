@@ -7,18 +7,16 @@ const GameBox = () => {
     const [games, setGames] = useState([]);
     const [genres, setGenres] = useState([]);
 
-    async function getGames() {
-        const url = (`https://www.freetogame.com/api/games`);
-        const response = await fetch(url);
-        const data = await response.json();
-        setGames(data);
-        getGenres();
-        console.log(data);
-        console.log(genres);
-    }
+    const getGames = () => {
+        fetch(`https://www.freetogame.com/api/games`)
+        .then(result => result.json())
+        .then(data => setGames(data))
+        .then(console.log("1"))
+    };
 
     useEffect(() => {
         getGames();
+    console.log("2")
     }, []);
 
     const getGenres = () => {
@@ -29,8 +27,14 @@ const GameBox = () => {
             } else {filteredGenres.push(game.genre)}
         })
         setGenres(filteredGenres);
+        console.log("3")
         console.log(genres);
-    }
+    };
+
+    useEffect(() => {
+        getGenres();
+        console.log("4")
+    }, [games]);
 
     const filterByGenre = (games, genre) => {
         const filteredGames = games.filter(game => game.genre === genre);
