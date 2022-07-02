@@ -1,12 +1,12 @@
 import React from "react";
 
-const FilterResults = ({games}) => {
-    const results = games.map(game => <li key={game.id}>{game.title}</li>)
+const FilterResults = ({results}) => {
+    const resultList = results.map(game => <li key={game.id}>{game.title}</li>)
     return (
         <div>
             <h2>Results</h2>
             <ol>
-                {results}
+                {resultList}
             </ol>
         </div>
     );

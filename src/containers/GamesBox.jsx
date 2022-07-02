@@ -6,18 +6,17 @@ import GenreSelect from "../components/GenreSelect";
 const GameBox = () => {
     const [games, setGames] = useState([]);
     const [genres, setGenres] = useState([]);
+    const [results, setResults] = useState([]);
 
     const getGames = () => {
         fetch(`https://www.freetogame.com/api/games`)
         .then(result => result.json())
         .then(data => setGames(data))
-        .then(console.log("1"))
+        setResults(games);
     };
 
-    useEffect(() => {
-        getGames();
-    console.log("2")
-    }, []);
+    useEffect(() => {getGames()}, []);
+    useEffect(() => {getGenres()}, [games]);
 
     const getGenres = () => {
         const filteredGenres = [];
@@ -27,26 +26,24 @@ const GameBox = () => {
             } else {filteredGenres.push(game.genre)}
         })
         setGenres(filteredGenres);
-        console.log("3")
-        console.log(genres);
     };
 
-    useEffect(() => {
-        getGenres();
-        console.log("4")
-    }, [games]);
-
-    const filterByGenre = (games, genre) => {
+    const filterByGenre = (genre) => {
         const filteredGames = games.filter(game => game.genre === genre);
-        setGames(filteredGames);
+        setResults(filteredGames);
     };
+
+    const onSelectGenre = (genre) => {
+        filterByGenre(genre);
+        console.log(genre);
+    }
 
     return (
         <div>
             <h1>Games Box</h1>
             <Header/>
-            <GenreSelect genres={genres}/>
-            <FilterResults games={games}/>
+            <GenreSelect genres={genres} onSelectGenre={onSelectGenre}/>
+            {results.length === 0 ? <FilterResults results={games}/> : <FilterResults results={results}/>}
         </div>
     );
 };
