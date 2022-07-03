@@ -11,7 +11,7 @@ const GenresPieChart = ({games, genres}) => {
         let count = 0;
         games.forEach(game => {
             if (game.genre === genre) {
-                count =+ 1;
+                count++;
             }
         })
         return count;

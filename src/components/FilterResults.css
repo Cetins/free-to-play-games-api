@@ -1,0 +1,29 @@
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game-list-card {
+    background-color: white;
+    flex: 1 1 150px;
+    flex: 0 1 150px;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.game-list-card>h3,h4,p,img,a {
+    margin: 5px;
+    padding: 5px;
+}
+
+.game-list-card-img {
+    margin: 5px;
+}
+
+.game-list-card>a {
+    display: block;
+    background-color: green;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}

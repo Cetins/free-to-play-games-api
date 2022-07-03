@@ -1,8 +1,11 @@
 import React, {useEffect, useState} from "react";
-import Header from "../components/Header";
-import FilterResults from "../components/FilterResults";
 import GenreSelect from "../components/GenreSelect";
+import FilterResults from "../components/FilterResults";
+import DetailsButton from "../components/DetailsButton"
 import GenresPieChart from "../components/GenresPieChart";
+import '../components/FilterResults.css';
+
+import './GamesBox.css'
 
 const GameBox = () => {
     const [games, setGames] = useState([]);
@@ -41,10 +44,14 @@ const GameBox = () => {
 
     return (
         <div>
-            <h1>Games Box</h1>
-            <Header/>
+            <header className="center">
+                <h1>Games Box</h1>
+            </header>
+
             <GenreSelect genres={genres} onSelectGenre={onSelectGenre}/>
+
             {results.length === 0 ? <FilterResults results={games}/> : <FilterResults results={results}/>}
+
             <GenresPieChart games={games} genres={genres}/>
         </div>
     );

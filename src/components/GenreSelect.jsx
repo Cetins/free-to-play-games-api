@@ -1,4 +1,5 @@
 import React from "react";
+import './GenreSelect.css'
 
 const GenreSelect = ({genres, onSelectGenre}) => {
     const options = genres.map((genre, index) => {
@@ -11,13 +12,13 @@ const GenreSelect = ({genres, onSelectGenre}) => {
     }
 
     return (
-        <div>
+        <span className="filter-header">
             <h2>Filter By Genre</h2>
-            <select defaultValue="" onChange={handleChange}>
+            <select className="genre-select" defaultValue="" onChange={handleChange}>
                 <option value="">All</option>
                 {options}
             </select>
-        </div>
+        </span>
     )
 };
 
