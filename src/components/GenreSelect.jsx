@@ -14,8 +14,8 @@ const GenreSelect = ({genres, onSelectGenre}) => {
     return (
         <span className="filter-header">
             <h2>Filter By Genre</h2>
-            <select className="genre-select" defaultValue="" onChange={handleChange}>
-                <option value="">All</option>
+            <select className="genre-select" defaultValue="All" onChange={handleChange}>
+                <option value="">Genres</option>
                 {options}
             </select>
         </span>

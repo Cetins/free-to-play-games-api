@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from "react";
 import GenreSelect from "../components/GenreSelect";
 import FilterResults from "../components/FilterResults";
-import DetailsButton from "../components/DetailsButton"
 import GenresPieChart from "../components/GenresPieChart";
 import '../components/FilterResults.css';
-
 import './GamesBox.css'
 
 const GameBox = () => {
+
     const [games, setGames] = useState([]);
     const [genres, setGenres] = useState([]);
     const [results, setResults] = useState([]);
@@ -23,7 +22,7 @@ const GameBox = () => {
     useEffect(() => {getGenres()}, [games]);
 
     const getGenres = () => {
-        const filteredGenres = [];
+        const filteredGenres = ["All"];
         games.forEach(game => {
             if (filteredGenres.includes(game.genre)) {
                 
@@ -33,8 +32,14 @@ const GameBox = () => {
     };
 
     const filterByGenre = (genre) => {
-        const filteredGames = games.filter(game => game.genre === genre);
-        setResults(filteredGames);
+        let filteredGames = [];
+        if (genre == 'All') {
+            filteredGames = [...games];
+            setResults(filteredGames);
+        } else {
+            filteredGames = games.filter(game => game.genre === genre);
+            setResults(filteredGames);
+        }
     };
 
     const onSelectGenre = (genre) => {

@@ -8,7 +8,7 @@ const FilterResults = ({results}) => {
             <h4>{game.developer}</h4>
             <p>{game.platform}</p>
             <img className="game-list-card-img" src={game.thumbnail} alt={game.title}/>
-            <p>{game.short_description}</p>
+            <p className="description">{game.short_description}</p>
             <a href={game.game_url}>Visit <strong>{game.title}</strong> page</a>
         </div>
         )
