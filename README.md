@@ -16,6 +16,8 @@ Copy th link of this project and clone to your local machine desired location. F
 
 ### Cors Extension
 
+<img width="590" alt="Screenshot 2022-07-28 at 13 12 45" src="https://user-images.githubusercontent.com/69481095/181502069-58c1dc2b-3f8a-4345-a5d7-49e042fd1ca6.png">
+
 API in this project requires cors. You can add this extension to your Chrome browser to overcome cors problems in general. Link for the extension I'm using is https://chrome.google.com/webstore/detail/cross-domain-cors/mjhpgnbimicffchbodmgfnemoghjakai . After adding this extension go to the settings and change it to enable only when selected. Otherwise this extension runs in all websites you browse and breaks most of them :) I've added a shortcut to top bar of browser and I only run this extension when working with my projects.
 
 Feel free to contribute this project but run & test on your local before merging. I may go back to my old projects time to time make some additions, so please don't break it :)
