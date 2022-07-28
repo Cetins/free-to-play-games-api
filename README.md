@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# Free Games To Play
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project created for CodeClan as a homework. It pulls data from freetogame API and displays with simple user interface coded with React. For more information about the API source please visit => https://www.freetogame.com/ 
 
-## Available Scripts
+## Functionality
 
-In the project directory, you can run:
+It's a one page app, displays all the games in card view. User can use the select genre dropdown to narrow the results by genre. The app renders all the games in the beginning, after select a genre to narrow results user can go back to display all results by selecting the `all` option in the dropdown. Every game card has a link to games website. User can click and visit.
 
-### `npm start`
+### How to download and run this project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Copy th link of this project and clone to your local machine desired location. For more help with cloning GitHub repositories you can visit https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository . `cd` to the folder you cloned, run `npm i` to initialize you folder. If you don't have npm installed to your machine you can visit https://docs.npmjs.com/downloading-and-installing-node-js-and-npm . After initializing your folder run `npm start` in your terminal. The Project will be start to run your default browser. I personally suggest Chrome because it has lots of good tools and extensions available to debug your app.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Cors Extension
 
-### `npm test`
+API in this project requires cors. You can add this extension to your Chrome browser to overcome cors problems in general. Link for the extension I'm using is https://chrome.google.com/webstore/detail/cross-domain-cors/mjhpgnbimicffchbodmgfnemoghjakai . After adding this extension go to the settings and change it to enable only when selected. Otherwise this extension runs in all websites you browse and breaks most of them :) I've added a shortcut to top bar of browser and I only run this extension when working with my projects.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Feel free to contribute this project but run & test on your local before merging. I may go back to my old projects time to time make some additions, so please don't break it :)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy coding!
