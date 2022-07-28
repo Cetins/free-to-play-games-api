@@ -1,4 +1,4 @@
-<img width="400" alt="Screenshot 2022-07-28 at 13 03 53" src="https://user-images.githubusercontent.com/69481095/181501532-c7a4688d-cd51-4cf9-932f-3b7b418a87d7.png">
+<img width="600" alt="Screenshot 2022-07-28 at 13 03 53" src="https://user-images.githubusercontent.com/69481095/181501532-c7a4688d-cd51-4cf9-932f-3b7b418a87d7.png">
 
 # Free Games To Play
 
