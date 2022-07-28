@@ -1,3 +1,5 @@
+<img width="400" alt="Screenshot 2022-07-28 at 13 03 53" src="https://user-images.githubusercontent.com/69481095/181501532-c7a4688d-cd51-4cf9-932f-3b7b418a87d7.png">
+
 # Free Games To Play
 
 This project created for CodeClan as a homework. It pulls data from freetogame API and displays with simple user interface coded with React. For more information about the API source please visit => https://www.freetogame.com/ 
@@ -5,6 +7,7 @@ This project created for CodeClan as a homework. It pulls data from freetogame A
 ## Functionality
 
 It's a one page app, displays all the games in card view. User can use the select genre dropdown to narrow the results by genre. The app renders all the games in the beginning, after select a genre to narrow results user can go back to display all results by selecting the `all` option in the dropdown. Every game card has a link to games website. User can click and visit.
+<img width="200" alt="Screenshot 2022-07-28 at 13 04 18" src="https://user-images.githubusercontent.com/69481095/181501593-aa971ac1-8a1f-4027-93b2-2f23544b11a4.png">
 
 ### How to download and run this project
 
